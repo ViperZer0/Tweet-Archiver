@@ -39,11 +39,12 @@ The script can be run in any of the following modes, and uses GNU style `-<argum
   - -u: update the Tweet database
   - -U: Force update the Tweet database
 
-This script is best used when integrated with other programs. For instance, I use a Linux distro with systemd. I have a user service and a timer that updates the database daily. The `.service` and `.timer` files I use for this are included. They are user-ran, so to install them, place them in the directory where your systemd user service files are located (probably `~/.config/systemd/user/` and run the following commands
+This script is best used when integrated with other programs. For instance, I use a Linux distro with systemd. I have a user service and a timer that updates the database daily. The `.service` and `.timer` files I use for this are included. They are user-ran, so to install them, place them in the directory where your systemd user service files are located (probably `~/.config/systemd/user/`. Edit the `tweetarchiver.service` file and change `<dir>` to the directory where your script is installed. Then run the following commands to make the service run daily (this can be changed by editing the `tweetarchiver.timer` file)
+
 
 ```
 systemctl --user daemon-reload
-systemctl --user enable tweetArchiver.timer
+systemctl --user enable tweetarchiver.timer
 ```
 
 This should be sufficient to update the database daily.

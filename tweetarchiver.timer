@@ -1,0 +1,10 @@
+[Unit]
+Description=Update Tweet database daily
+
+[Timer]
+OnCalendar=Daily
+AccuracySec=12h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

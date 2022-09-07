@@ -1,0 +1,10 @@
+[Unit]
+Description=Update tweet database
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'python <dir>/script.py -u'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
