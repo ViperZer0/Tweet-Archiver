@@ -8,6 +8,7 @@ import os
 
 class TweetRetriever():
     #UserID of Iinux account.
+    #Put the user id of the account you want to archive here!
     user_id = 3394482083
     bearerTokenName = "token"
     dbName = "tweets.db"

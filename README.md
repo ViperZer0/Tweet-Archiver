@@ -1,6 +1,6 @@
 # About TweetArchiver
 
-This small, simple Python script builds a database of a single user's Tweets locally. This database can be updated, and this script also provided simple functionality to print a random Tweet from the database. The original purpose of this script was similar to something like the "fortune" program, and my usage of it is printing out a random tweet from a specific Twitter user to the terminal every time I open a new one. This functionality is not directly coded within the script, but I show how I did it at the end of this document.
+This small, simple Python script builds a database of a single user's Tweets locally. This database can be updated, and this script also provides functionality to print a random Tweet from the database. The original purpose of this script was similar to something like the "fortune" program, and my personal usage of it is printing out a random tweet from a specific Twitter user to the terminal every time I open a new one. This functionality is not directly coded within the script, but I show how I did it at the end of this document.
 
 # Installation
 
@@ -24,15 +24,15 @@ You will also need to find the user ID of the twitter account whose tweets you w
 
 The script returns the given user's display name, username, and user ID.
 
-Open up the script, find the following variable, and change the user ID.
+Open up the `script.py` file, find the following variable, and change the user ID.
 
 ```user_id = <put user id here>```
 
-The first time you run this script, it will create an empty, local, SQLite database called `tweets.db`. 
+The first time you run this script, it will create an empty, local, SQLite database called `tweets.db`. This can be changed by setting the `dbName` variable. 
 
 # Usage
 
-The script can be run in any of the following modes, and uses GNU style `-<argument>` 
+The script can be run in any of the following modes, and uses GNU style `-<argument>` flags
 
   - -p: print a random Tweet
   - -g <username>: get a user's ID based on their username
