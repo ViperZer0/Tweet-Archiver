@@ -34,12 +34,21 @@ The first time you run this script, it will create an empty, local, SQLite datab
 
 The script can be run in any of the following modes, and uses GNU style `-<argument>` 
 
-  - p: print a random Tweet
-  - g <username>: get a user's ID based on their username
-  - u: update the Tweet database
-  - U: Force update the Tweet database
+  - -p: print a random Tweet
+  - -g <username>: get a user's ID based on their username
+  - -u: update the Tweet database
+  - -U: Force update the Tweet database
 
-This script is best used when integrated with other programs. For instance, I use a Linux distro with systemd. I have a user service and a timer that updates the database daily. If you use Windows, a distro that doesn't use systemd, or would rather use a different method of updating the database, you will have to find a way to implement this.
+This script is best used when integrated with other programs. For instance, I use a Linux distro with systemd. I have a user service and a timer that updates the database daily. The `.service` and `.timer` files I use for this are included. They are user-ran, so to install them, place them in the directory where your systemd user service files are located (probably `~/.config/systemd/user/` and run the following commands
+
+```
+systemctl --user daemon-reload
+systemctl --user enable tweetArchiver.timer
+```
+
+This should be sufficient to update the database daily.
+
+If you use Windows, a distro that doesn't use systemd, or would rather use a different method of updating the database, you will have to find a way to implement this
 
 Similarily, I simply added the following line to the end of my `.bashrc` file.
 
