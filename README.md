@@ -16,7 +16,7 @@ or
 
 as this script currently only requires tweepy as a dependency.
 
-You will need to create a `token` file with a bearer token from Twitter. This allows the script to read tweets. Visit the Twitter [Developer Portal](https://developer.twitter.com) and sign up for a developer account. You will need to generate a bearer token, which is used to access publically available, read-only information on Twitter (such as a users tweets) The `token` file should contain the bearer token string and nothing else.
+You will need to create a `token` file with a bearer token from Twitter. This allows the script to read tweets. Visit the Twitter [Developer Portal](https://developer.twitter.com) and sign up for a developer account. You will need to generate a bearer token, which is used to access publicly available, read-only information on Twitter (such as a users tweets) The `token` file should contain the bearer token string and nothing else.
 
 You will also need to find the user ID of the twitter account whose tweets you want to download and archive. This script provides a handy way of taking a username and returning this information.
 
