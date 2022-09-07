@@ -1,0 +1,6 @@
+# About TweetArchiver
+
+This small, simple Python script builds a database of a single user's Tweets locally. This database can be updated, and this script also provided simple functionality to print a random Tweet from the database. The original purpose of this script was similar to something like the "fortune" program, and my usage of it is printing out a random tweet from a specific Twitter user to the terminal every time I open a new one. This functionality is not directly coded within the script, but I show how I did it at the end of this document.
+
+# Installation
+
